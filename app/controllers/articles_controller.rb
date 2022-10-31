@@ -23,6 +23,9 @@ class ArticlesController < ApplicationController
 	def about
 	end
 
+	def arcwelding
+	end
+
 
 	private
 
