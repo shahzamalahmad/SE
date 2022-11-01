@@ -1,8 +1,6 @@
 class ArticlesController < ApplicationController
 
 	def index
-
-
 	end
 
 	def show
@@ -37,10 +35,6 @@ class ArticlesController < ApplicationController
 	
 	def gallery
 		@articles = Article.all
-	end
-	
-	def contact
-		@article = Article.new
 	end
 	
 	def about
