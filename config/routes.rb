@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get "articles/services"
   get "articles/gallery"
   get "articles/faq"
-  get "articles/new"
+  get "articles/new", to: "articles#new"
   get "articles/contact"
 
 
