@@ -1,1 +1,26 @@
-Gallery
+<h1 style="text-align: center;">requirments</h1>
+
+<div class="container-fluid">
+  <% @articles.each do |article| %>
+      <div class="row">
+        <div class="col-2" style="text-align: right;">
+          <strong>
+            <%= article.id %>
+          </strong>
+        </div>
+        <div class="col-8">
+          
+          Dear sir
+          <br>
+          My name is &nbsp <strong><%= article.name %></strong>. &nbsp You can click on this Email id &nbsp <%= mail_to article.email %> &nbsp to mail me.
+            <br>
+          you can also click on this number &nbsp <strong><%= phone_to article.mobile %></strong> &nbsp to call me.
+              <br>
+          I have these requirements for  &nbsp <%= link_to article.company, article %> &nbsp company/person
+               <br>
+
+            <%= link_to article.massage, article %>
+        </div>
+      </div>
+  <% end %>
+</div>

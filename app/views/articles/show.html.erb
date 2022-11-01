@@ -1,0 +1,27 @@
+<% if @article.id == 1 %>
+  <h1 style="text-align: center;"> 1<sup>st</sup> requirment</h1>
+<% elsif @article.id == 2 %>
+  <h1 style="text-align: center;"> 2<sup>nd</sup> requirment</h1>
+<% elsif @article.id > 2 %>
+  <h1 style="text-align: center;"> <%= @article.id %><sup>th</sup> requirment</h1>
+
+<% end %>
+
+<div class="container-fluid" style="text-align: center;">
+      <div class="row">
+       
+        <div class="col">
+          
+          Dear sir
+          <br>
+          My name is &nbsp <strong><%= @article.name %></strong>. &nbsp You can click on this Email id &nbsp <%= mail_to @article.email %> &nbsp to mail me.
+            <br>
+          you can also click on this number &nbsp <strong><%= phone_to @article.mobile %></strong> &nbsp to call me.
+              <br>
+          I have these requirements for  &nbsp <%= link_to @article.company, @article %> &nbsp company/person
+               <br>
+
+            <%= @article.massage %>
+        </div>
+      </div>
+</div>
